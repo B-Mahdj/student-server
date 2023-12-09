@@ -64,7 +64,7 @@ jobs:
         with:
           arguments: bootJar
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag server:$(date +%s)
+        run: docker build . --file Dockerfile --tag student-server:$(date +%s)
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
       - name: Push Docker image to Docker Hub
